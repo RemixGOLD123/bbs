@@ -1778,10 +1778,10 @@ a {
   .sec7 .title {
     text-align: center;
     font-size: 21px;
+    text-decoration: underline;
   }
   .sec7 .title:before {
-    left: 5px;
-    width: 97%;
+    display: none;
   }
   .sec7 ul li {
     padding-left: 35px;
@@ -1850,7 +1850,7 @@ a {
     height: 100%;
   }
   .slider_block3 .slide .txt {
-    width: 290px;
+    width: 100%;
   }
   .slider_block3 .slide .txt .title {
     display: none;
@@ -1926,6 +1926,23 @@ a {
   }
   .footer .totop {
     margin-top: 20px;
+  }
+  .md-modal {
+    width: 280px !important;
+    left: 180px !important;
+    top: 50% !important;
+  }
+  .md-modal .md-content h3 {
+    font-size: 18px;
+  }
+  .md-modal .md-content h3 br {
+    display: none;
+  }
+  .md-modal .md-content .form .block_input input, .md-modal .md-content .btn {
+    width: 280px;
+  }
+  .md-modal .md-content > div {
+    padding: 0;
   }
   header,
   section,
