@@ -1,7 +1,44 @@
-jQuery(".button2").click(function () {
+
+jQuery(".men1").click(function () {
     jQuery('html, body').animate({
-        scrollTop: jQuery(".s2").offset().top
+        scrollTop: jQuery(".sec4").offset().top -90
     }, 400);
+});
+jQuery(".men2").click(function () {
+    jQuery('html, body').animate({
+        scrollTop: jQuery(".sec3").offset().top -90
+    }, 400);
+});
+jQuery(".men3").click(function () {
+    jQuery('html, body').animate({
+        scrollTop: jQuery(".sec9").offset().top -90
+    }, 400);
+});
+jQuery(".men4").click(function () {
+    jQuery('html, body').animate({
+        scrollTop: jQuery(".sec7").offset().top -90
+    }, 400);
+});
+jQuery(".men5").click(function () {
+    jQuery('html, body').animate({
+        scrollTop: jQuery(".sec5").offset().top -90
+    }, 400);
+});
+jQuery(".men6").click(function () {
+    jQuery('html, body').animate({
+        scrollTop: jQuery(".sec10").offset().top -90
+    }, 400);
+});
+
+jQuery(".totop").click(function () {
+    jQuery('html, body').animate({
+        scrollTop: jQuery(".sec1").offset().top -90
+    }, 400);
+});
+
+jQuery('#mobile-menu li').click(function(){
+    jQuery('#mobile-menu').toggleClass('show_mobile_menu')
+    jQuery('#burger-menu').toggleClass('active')
 });
 
 
@@ -27,6 +64,25 @@ $(document).ready(function() {
         // Mode: 'fade',
     });
 });
+
+// var viewportWidth = $(window).width();
+
+// if (viewportWidth < 767) {
+//     $('.bx-slider2').bxSlider({
+//         minSlides: 1,
+//         maxSlides: 2,
+//         slideWidth: 280,
+//         slideMargin: 31,
+//         moveSlides: 1,
+//         controls: false,
+//     });
+// };
+
+
+
+
+
+
 var burgerCtr = document.querySelector("#burger-menu");
 var menuCtr = document.querySelector("#mobile-menu");
 burgerCtr.addEventListener("click", function() {

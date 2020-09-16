@@ -51,6 +51,8 @@ a {
   z-index: 1000;
   height: 90px;
   background-color: #fff;
+  -webkit-box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1503,14 +1505,16 @@ a {
 }
 
 #mobile-menu {
-  padding: 90px 20px 25px;
+  padding: 90px 0 25px;
   opacity: 0;
-  position: absolute;
+  position: fixed;
   left: -100%;
   top: 0;
   width: 100%;
   height: auto;
   z-index: -1;
+  -webkit-box-shadow: 0 0 20px #000;
+  box-shadow: 0 0 20px #000;
   background: #fffdfd;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1524,8 +1528,6 @@ a {
 }
 
 #mobile-menu ul {
-  padding-left: 0;
-  width: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1536,17 +1538,220 @@ a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  list-style: none;
 }
 
-#mobile-menu ul a {
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: 700;
+#mobile-menu ul li {
   padding: 10px 0;
-  display: block;
-  color: #229fd9;
-  position: relative;
+}
+
+#mobile-menu ul li a {
+  color: #000;
+  font-weight: 500;
+  letter-spacing: -0.32px;
+  text-transform: uppercase;
+  -webkit-transition: .2s color;
+  -o-transition: .2s color;
+  transition: .2s color;
+}
+
+#mobile-menu ul li a:hover {
+  color: #ffba00;
+}
+
+#mobile-menu ul li .active {
+  color: #ffba00;
+}
+
+header,
+section,
+footer,
+.map img {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden;
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .menu ul li {
+    padding: 0 5px;
+  }
+  .menu ul li a {
+    font-size: 14px;
+  }
+  .contact a {
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 991px) {
+  #burger-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 45px;
+  }
+  .header .menu {
+    display: none;
+  }
+  .header .call {
+    margin-right: 100px;
+  }
+  .sec1 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    height: auto;
+  }
+  .sec1 .title {
+    font-size: 72px;
+  }
+  .tabs .tabs__content .block {
+    width: 100%;
+  }
+  .tabs .tabs__content .block .left_b {
+    width: 32%;
+  }
+  .tabs .tabs__content .block .left_b img {
+    width: 100%;
+  }
+  .tabs .tabs__content .block .left_b .txt .text {
+    font-size: 10px;
+  }
+  .tabs .tabs__content .block .center_b {
+    width: 36%;
+    padding: 25px 0 25px 25px;
+  }
+  .tabs .tabs__content .block .center_b .title {
+    font-size: 19px;
+  }
+  .tabs .tabs__content .block .center_b ul li {
+    font-size: 9px;
+  }
+  .tabs .tabs__content .block .center_b ul li b {
+    font-size: 16px;
+  }
+  .tabs .tabs__content .block .center_b .line {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 15px;
+  }
+  .tabs .tabs__content .block .center_b .line .line__item:first-child span {
+    font-size: 13px;
+  }
+  .tabs .tabs__content .block .center_b .line .line__item:first-child span:last-child {
+    font-size: 24px;
+  }
+  .tabs .tabs__content .block .right_b {
+    width: 32%;
+  }
+  .sec4 {
+    padding-top: 40px;
+    padding-bottom: 0;
+    text-align: center;
+  }
+  .sec4:before {
+    display: none;
+  }
+  .sec4 .b-before {
+    display: block;
+    width: 750px;
+  }
+  .slider_block1 img {
+    width: 500px !important;
+  }
+  .sec5 {
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+  .sec5 .container .sec5__inner {
+    display: block;
+  }
+  .sec5 .container .sec5__inner ul {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .sec5 .container .sec5__inner .form_block {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .sec5 .container .sec5__inner .form_block .block_input input {
+    margin-bottom: 20px;
+  }
+  .sec5 .container .sec5__inner .form_block .btn {
+    margin-top: 20px;
+  }
+  .slider_block2 .bx-pager {
+    display: none;
+  }
+  .sec6 .txt .title {
+    font-size: 42px;
+  }
+  .sec6 .txt button {
+    margin-top: 7px;
+  }
+  .sec8 .block .block__item .line .suptitle {
+    font-size: 22px;
+  }
+  .sec8 .block .block__item .line .text {
+    font-size: 13px;
+  }
+  .sec7 {
+    text-align: center;
+  }
+  .sec7 .title {
+    text-decoration: underline;
+  }
+  .sec7 .title:before {
+    display: none;
+  }
+  .sec7 ul {
+    text-align: left;
+    margin-top: 20px;
+  }
+  .sec8 .block .block__item {
+    width: 50%;
+  }
+  .slider_block3 {
+    width: 100%;
+  }
+  .slider_block3 .slide {
+    display: block;
+    text-align: center;
+  }
+  .slider_block3 .slide .photo {
+    display: inline;
+  }
+  .slider_block3 .slide .txt {
+    width: 100%;
+  }
+  .footer .footer__inner ul.menu1 {
+    margin-bottom: 30px;
+  }
+  .footer .footer__inner ul.menu1, .footer .footer__inner ul.menu2, .footer .footer__inner .menu3 {
+    width: 18%;
+  }
+  .footer .copy {
+    margin-top: 40px;
+  }
+  .footer .totop {
+    margin-top: 51px;
+  }
+  .container {
+    width: 750px !important;
+    max-width: 750px !important;
+  }
+  header,
+  section,
+  footer,
+  .map img {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1554,10 +1759,7 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    top: 44px;
-  }
-  .header {
-    position: relative;
+    top: 45px;
   }
   .menu,
   .contact,
@@ -1565,7 +1767,6 @@ a {
     display: none;
   }
   .sec1 {
-    margin-top: 0;
     padding-top: 70px;
     height: 600px;
   }
@@ -1705,9 +1906,6 @@ a {
   .form_block ul li {
     padding-left: 36px;
     font-size: 12px;
-  }
-  .form_block .btn {
-    margin: 0 auto;
   }
   .slider_block1 {
     width: 100%;
@@ -1868,7 +2066,8 @@ a {
   }
   .slider_block3 .slide .txt .name {
     margin-top: 20px;
-    margin-right: 50px;
+    margin-right: 0;
+    text-align: center;
   }
   .contact_block {
     display: block;
@@ -1936,7 +2135,7 @@ a {
   }
   .md-modal {
     width: 280px !important;
-    left: 180px !important;
+    left: 50% !important;
     top: 50% !important;
   }
   .md-modal .md-content h3 {
@@ -1951,12 +2150,16 @@ a {
   .md-modal .md-content > div {
     padding: 0;
   }
+  .container {
+    width: 320px !important;
+    max-width: 320px !important;
+  }
   header,
   section,
   footer,
-  .container,
   .map img {
     width: 100% !important;
     max-width: 100% !important;
+    overflow-x: hidden;
   }
 }
