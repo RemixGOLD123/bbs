@@ -665,6 +665,7 @@ a {
             font-size: 48px;
             font-weight: 700;
             letter-spacing: -2.5px;
+            text-align: left;
         }
         button {
             margin-top: 25px;
@@ -1378,9 +1379,6 @@ a {
         ul {
             li {
                 font-size: 13px;
-                &:before {
-
-                }
             }
         }
     }
@@ -1533,6 +1531,7 @@ a {
         }
     }
     .slider_block2.slider-active {
+        width: 100%;
         height: 350px;
     }
     .slider_block2 .slide .slide__photo .txt .title {
@@ -1578,9 +1577,9 @@ a {
         .title {
             text-align: center;
             font-size: 21px;
+            text-decoration: underline;
             &:before {
-                left: 5px;
-                width: 97%;
+                display: none;
             }
         }
         ul {
@@ -1656,7 +1655,7 @@ a {
             }
         }
         .txt {
-            width: 290px;
+            width: 100%;
             .title {
                 display: none;
             }
@@ -1726,8 +1725,14 @@ a {
         display: block;
         text-align: center;
     }
-    .footer .footer__inner ul.menu1, .footer .footer__inner ul.menu2 {
+    .footer .footer__inner ul.menu1, .footer .footer__inner ul.menu2, .footer .footer__inner .menu3 {
         width: 100%;
+        // margin-top: 25px;
+        margin: 0;
+        padding: 0;
+        border-top: 0;
+    }
+    .footer .footer__inner ul.menu1, .footer .footer__inner .menu3 {
         margin-top: 25px;
     }
     .footer {
@@ -1736,6 +1741,24 @@ a {
         }
         .totop {
             margin-top: 20px;   
+        }
+    }
+
+    .md-modal {
+        width: 280px !important;
+        left: 180px !important;
+        top: 50% !important;
+        .md-content {
+            h3 {
+                font-size: 18px;
+                br {display: none;}
+            }
+            .form .block_input input, .btn {
+                width: 280px;
+            }
+            > div {
+                padding: 0;
+            }
         }
     }
 
